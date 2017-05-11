@@ -20,9 +20,16 @@ func IterateOverASCIIStringLiteral(ascii string) {
 	//	fmt.Printf("%b ", sl[i])
 }
 
-func GreetingASCII() {
-	a := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
-	for i := 0; i < len(a); i++ {
-		fmt.Printf("%c", a[i])
+func GreetingASCII() string {
+	// Print DEC
+	fmt.Println("DEC:")
+	helloDec := []byte{34, 72, 101, 108, 108, 111, 32, 58, 45, 41, 34}
+	for i := 0; i < len(helloDec); i++ {
+		fmt.Printf("%c", helloDec[i])
+	//	fmt.Printf("%s", string(helloDec[i]))
 	}
+	fmt.Println("")
+	// Print HEX
+	hellohex := "\x22\x48\x65\x6C\x6C\x6F\x20\x3A\x2D\x29\x22"
+	return hellohex
 }
